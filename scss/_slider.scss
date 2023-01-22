@@ -1,0 +1,148 @@
+.slider {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &__slide {
+        width: 41.66vw;
+        min-width: 240px;
+    }
+
+    .slick-prev {
+        border: none;
+        position: absolute;
+        height: 42px;
+        width: 42px;
+        top: 50%;
+        left: -50px;
+        color: rgba(255, 255, 255, 0);
+        z-index: 4;
+        cursor: pointer;
+        background: url(../svg/Arrow.svg) center no-repeat;
+        transform: rotate(90deg);
+
+        &:hover {
+            background-color: #bddbe4;
+            border-radius: 50%;
+        }
+    }
+
+    .slick-next {
+        border: none;
+        position: absolute;
+        height: 42px;
+        width: 42px;
+        top: 50%;
+        right: -50px;
+        color: rgba(255, 255, 255, 0);
+        z-index: 4;
+        cursor: pointer;
+        background: url(../svg/Arrow.svg) center no-repeat;
+        transform: rotate(-90deg);
+
+        &:hover {
+            background-color: #bddbe4;
+            border-radius: 50%;
+        }
+    }
+
+    .slick-dots {
+        display: flex;
+        padding-left: 0;
+        list-style: none;
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
+
+        li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+
+            &.slick-active {
+                button {
+                    background-color: #5C8692;
+                }
+            }
+
+            button {
+                font-size: 0;
+                background: transparent;
+                border: 1px solid #5C8692;
+                width: 15px;
+                height: 15px;
+                padding: 0;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+
+        }
+
+    }
+
+}
+
+.articles-slide {
+    max-width: 600px;
+
+    &__text {
+        height: 190px;
+        padding: 2.3vw 3.26vw 1.75vw 2.08vw;
+        @include adaptiv-font(19, 13);
+        line-height: 32px;
+        background-color: #fff;
+    }
+
+    &__info {
+        max-height: 123px;
+        background: #1E2C30;
+
+    }
+}
+
+.customer {
+    padding: 1.52vw 2.08vw 1.8vw;
+    display: flex;
+    justify-content: space-between;
+
+    &__foto {
+
+        display: flex;
+
+        &_size {
+            width: 75px;
+            height: 75px;
+        }
+    }
+
+    &__name {
+        margin-left: 1.4vw;
+
+        &_title {
+            @include adaptiv-font(20, 14);
+            line-height: 24px;
+            letter-spacing: 0.24px;
+            color: #FFFFFF;
+            width: 173px;
+        }
+
+        &_text {
+            @include adaptiv-font(14, 8);
+            line-height: 21px;
+            letter-spacing: 0.42px;
+            color: #FFFFFF;
+        }
+    }
+
+}
+
+.slider .slick-track {
+    display: flex;
+    gap: 15px;
+}
+
+.slider .slick-list {
+    margin: 0 auto;
+    // max-width: 1000px;
+}
