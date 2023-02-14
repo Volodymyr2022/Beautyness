@@ -1,0 +1,111 @@
+.btn {
+    @include fontSize(400, 14px, 21px, normal);
+    letter-spacing: 1.4px;
+    color: #FFFFFF;
+    background-color: $button-color;
+    text-align: center;
+    border: 2px solid $button-color;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+    position: relative;
+    top: 0;
+    
+    transition: all 0.3s ease;
+
+    &:hover {
+        opacity: 0.8;
+        box-shadow: 4px 4px 6px #798590;
+        
+    }
+
+    &:active {
+        border: #758797;
+        box-shadow: 2px 2px 6px #798590;
+        top: 2px;
+    }
+
+    &__reservetion {
+        width: 200px;
+        height: 58px;
+        position: relative;
+
+        &::before {
+            content: url(../img/header/reservation.svg);
+            position: absolute;
+            top: 33%;
+            left: 10%;
+        }
+    }
+
+    &__more-reservation {
+        width: 235px;
+        height: 57px;
+    }
+
+    &__contact {
+        font-size: 18px;
+        line-height: 27px;
+        width: 140px;
+    }
+}
+.btn-appointment,
+.btn-readmore,
+.btn-seemore {
+    @include fontSize(400, 13px, 20px, normal);
+    text-align: center;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #141414;
+    background-color: #fff;
+    width: 157px;
+    height: 57px;
+    border: 2px solid $button-color;
+    transition: all 0.3s ease;
+    position: relative;
+    top: 0;
+
+    &:hover {
+        color: #fff;
+        background-color: $button-color;
+        box-shadow: 4px 4px 6px #767879;
+    }
+
+    &:active {
+        box-shadow: 2px 2px 3px $button-color;
+        top: 2px;
+    }
+}
+
+.btn-appointment {
+    width: 248px;
+}
+
+.up-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $button-color;
+    opacity: 0.7;
+    z-index: 1;
+    transition: all 0.5s ease;
+    
+    &:hover {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        background-color: $button-color;
+        transform: rotate(180deg);
+        background: url(../svg/Arrow.svg) center no-repeat;
+    }
+}

@@ -1,0 +1,43 @@
+@mixin flexBox($flex, $justify, $align, $wrap) {
+    display: $flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+}
+
+@mixin fontSize($weight, $size, $height, $normal) {
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+    font-style: $normal;
+}
+
+@mixin positWidHeig($position, $left, $top, $width, $height) {
+    position: $position;
+    left: $left;
+    top: $top;
+    width: $width;
+    height: $height;
+}
+
+$maxWidth: 1440;
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $maxWidth: $maxWidth - 320;
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+
+$button-color: #5C8692;
+$little-text-color: #5C8692;
+$bacground-color: #EBF3F5;
+$gradient-color: linear-gradient(0deg, #7bcbbc, #677979e7);
+
+
+
+// $bacground-color: #524f4d7d
+
+// $button-color: #5C8692;
+// $little-text-color: #5C8692;
+// $bacground-color: #524f4d7d;
+// $gradient-color: linear-gradient(0deg, #7bcbbc, #677979e7);
